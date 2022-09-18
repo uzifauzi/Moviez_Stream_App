@@ -1,6 +1,3 @@
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
-
 import 'package:flutter/material.dart';
 import 'package:moviez_streaming_app/models/movie_models.dart';
 import 'package:moviez_streaming_app/theme.dart';
@@ -57,7 +54,7 @@ class _SearchPageState extends State<SearchPage> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 35,
             ),
             Row(
@@ -78,12 +75,12 @@ class _SearchPageState extends State<SearchPage> {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Expanded(
               //if don't get data
-              child: displayList.length == 0
+              child: displayList.isEmpty
                   ? Center(
                       child: Text(
                         'No result found',
@@ -105,14 +102,14 @@ class _SearchPageState extends State<SearchPage> {
                       }),
                     ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 73,
             ),
             Center(
               child: ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
-                  fixedSize: Size(220, 60),
+                  fixedSize: const Size(220, 60),
                   primary: purpleColor,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(37),

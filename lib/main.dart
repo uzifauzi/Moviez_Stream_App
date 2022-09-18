@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:moviez_streaming_app/pages/home_page.dart';
-import 'package:moviez_streaming_app/pages/search_page.dart';
 
 void main() {
   runApp(const MyApp());

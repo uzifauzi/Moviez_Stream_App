@@ -35,7 +35,7 @@ class MovieCard extends StatelessWidget {
               borderRadius: BorderRadius.circular(21),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 19,
           ),
           Row(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moviez_streaming_app/pages/search_page.dart';
 import 'package:moviez_streaming_app/theme.dart';
 import 'package:moviez_streaming_app/widgets/movie_card.dart';
 import 'package:moviez_streaming_app/widgets/movie_list.dart';
@@ -38,17 +39,23 @@ class _HomePageState extends State<HomePage> {
                             )),
                       ],
                     ),
-                    Spacer(),
-                    Image.asset('assets/images/btn_search.png'),
+                    const Spacer(),
+                    InkWell(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => const SearchPage(),
+                          ));
+                        },
+                        child: Image.asset('assets/images/btn_search.png')),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
-                    children: [
+                    children: const [
                       MovieCard(
                         image: 'assets/images/johnwick.png',
                         title: 'John Wick 4',
@@ -64,7 +71,7 @@ class _HomePageState extends State<HomePage> {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 Text(
@@ -72,15 +79,15 @@ class _HomePageState extends State<HomePage> {
                   style: purpleTextStyle.copyWith(
                       fontWeight: FontWeight.bold, fontSize: 24),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                MovieList(
+                const MovieList(
                     image: 'assets/images/mulan.png',
                     title: 'Mulan Session',
                     genre: 'History, War',
                     rating: 3),
-                MovieList(
+                const MovieList(
                     image: 'assets/images/beautynbeast.png',
                     title: 'Beauty & Beast',
                     genre: 'Sci-Fiction',

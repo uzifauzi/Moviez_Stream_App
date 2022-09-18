@@ -18,7 +18,7 @@ class MovieList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(
+      margin: const EdgeInsets.only(
         bottom: 30,
       ),
       child: Row(
@@ -32,7 +32,7 @@ class MovieList extends StatelessWidget {
                   image: AssetImage(image),
                 )),
           ),
-          SizedBox(
+          const SizedBox(
             width: 20,
           ),
           Column(
@@ -43,7 +43,7 @@ class MovieList extends StatelessWidget {
                 style: purpleTextStyle.copyWith(
                     fontWeight: FontWeight.bold, fontSize: 20),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 4,
               ),
               Text(
@@ -52,7 +52,7 @@ class MovieList extends StatelessWidget {
                   fontSize: 16,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Row(
